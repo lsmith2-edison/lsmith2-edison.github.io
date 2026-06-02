@@ -3,222 +3,421 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Courses</title>
+  <title>Proposed Software Engineering A.A.S.</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .page-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .program-header {
+      margin-bottom: 2rem;
+    }
+    .program-header h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    .program-header .credit-total {
+      display: inline-block;
+      background: #0d6efd;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      margin-top: 0.4rem;
+    }
+    .program-header p {
+      color: #444;
+      margin-top: 1rem;
+      line-height: 1.7;
+      max-width: 860px;
+    }
+    .content-area {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .sequence-col {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    .form-col {
+      width: 480px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 1.5rem;
+    }
+    .form-col iframe {
+      width: 100%;
+      height: 85vh;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .semester-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6c757d;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .semester-label:first-child {
+      margin-top: 0;
+    }
+    .accordion-button {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .accordion-button.no-expand {
+      cursor: default;
+      pointer-events: none;
+      color: #6c757d;
+      background-color: #f8f9fa;
+    }
+    .accordion-button.no-expand::after {
+      display: none;
+    }
+    .gened-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: #e9ecef;
+      color: #6c757d;
+      padding: 0.15rem 0.5rem;
+      border-radius: 20px;
+      margin-left: 0.6rem;
+      vertical-align: middle;
+      letter-spacing: 0.03em;
+    }
+    .accordion-body p:last-child {
+      margin-bottom: 0;
+    }
+    .tools-label {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    @media (max-width: 900px) {
+      .content-area {
+        flex-direction: column;
+      }
+      .form-col {
+        width: 100%;
+        position: static;
+      }
+      .form-col iframe {
+        height: 600px;
+      }
+    }
+  </style>
 </head>
 <body>
+<div class="page-wrapper">
 
-<div class="container my-4">
-  <div class="accordion" id="courseAccordion">
+  <div class="program-header">
+    <h1>Proposed Software Engineering A.A.S.</h1>
+    <span class="credit-total">61 Credit Hours</span>
+    <p>This program is designed to prepare students for entry-level software engineering, web development, cloud development, quality assurance, DevOps, and related technical roles. Students progress from programming fundamentals through application development, cloud-native systems, secure software development, and modern deployment practices.</p>
+    <p>The proposed program sequence is included below with course descriptions and tools provided for each course relevant to the program. The number of credit hours are provided for each course in parentheses.</p>
+  </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
-          Programming Foundations (3)
-        </button>
-      </h2>
-      <div id="c1" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students develop problem-solving and programming skills using Python while learning core concepts such as variables, control structures, functions, data structures, and debugging. Git and GitHub are introduced to establish modern software development practices from the beginning of the program.</p>
-          <p><strong>Tools & Technologies:</strong> Python, Git, GitHub, VS Code</p>
-        </div>
-      </div>
-    </div>
+  <div class="content-area">
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
-          Web Foundations (3)
-        </button>
-      </h2>
-      <div id="c2" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students learn to create responsive and accessible websites while exploring modern web standards and client-side development. The course introduces HTML, CSS, JavaScript, browser development tools, and the foundations of interactive web applications.</p>
-          <p><strong>Tools & Technologies:</strong> HTML, CSS, JavaScript, GitHub, Browser Developer Tools</p>
-        </div>
-      </div>
-    </div>
+    <!-- Course Sequence -->
+    <div class="sequence-col">
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c13">
-          Systems Analysis and Design (3)
-        </button>
-      </h2>
-      <div id="c13" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students learn how to identify business needs and translate them into effective software solutions. The course focuses on requirements gathering, process analysis, system modeling, and solution design, helping students bridge the gap between technical implementation and organizational goals.</p>
-          <p><strong>Tools & Technologies:</strong> UML, User Stories, Process Modeling Techniques</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
-          Object-Oriented Design (3)
-        </button>
-      </h2>
-      <div id="c3" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students build on their programming foundation by learning how to organize, structure, and maintain larger software systems. Emphasis is placed on object-oriented design principles, abstraction, modularity, code reuse, and software maintainability.</p>
-          <p><strong>Tools & Technologies:</strong> Python, GitHub, VS Code</p>
-        </div>
-      </div>
-    </div>
+      <!-- FIRST SEMESTER -->
+      <div class="semester-label">First Semester</div>
+      <div class="accordion mb-3" id="sem1">
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c4">
-          Data Modeling (3)
-        </button>
-      </h2>
-      <div id="c4" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students learn how modern applications store, organize, and retrieve data through relational database design and SQL. The course also introduces transactions, normalization, concurrency concepts, and NoSQL databases.</p>
-          <p><strong>Tools & Technologies:</strong> PostgreSQL, SQL, Database Modeling Tools</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              Introduction to AI (1) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
         </div>
-      </div>
-    </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c5">
-          Computing Systems (3)
-        </button>
-      </h2>
-      <div id="c5" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students explore how software interacts with operating systems and computing infrastructure. Topics include processes, memory management, concurrency, virtualization, containers, and foundational concepts that support modern cloud platforms.</p>
-          <p><strong>Tools & Technologies:</strong> Linux, Docker, Kubernetes (introductory)</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s1c2" data-bs-parent="#sem1">
+              Programming Foundations (3)
+            </button>
+          </h2>
+          <div id="s1c2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students develop problem-solving and programming skills using Python while learning core concepts such as variables, control structures, functions, data structures, and debugging. Git and GitHub are introduced to establish modern software development practices from the beginning of the program.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Python, Git, GitHub, VS Code</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c14">
-          IT Project Management (3)
-        </button>
-      </h2>
-      <div id="c14" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students learn how software and technology projects are planned, executed, and managed throughout their lifecycle. The course emphasizes Agile project management, team collaboration, risk management, and project communication to prepare students for work on modern development teams.</p>
-          <p><strong>Tools & Technologies:</strong> Agile Methodologies, Scrum, Kanban, Project Management Software</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s1c3" data-bs-parent="#sem1">
+              Web Foundations (3)
+            </button>
+          </h2>
+          <div id="s1c3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students learn to create responsive and accessible websites while exploring modern web standards and client-side development. The course introduces HTML, CSS, JavaScript, browser development tools, and the foundations of interactive web applications.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> HTML, CSS, JavaScript, GitHub, Browser Developer Tools</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c6">
-          Algorithms and Data Structures (3)
-        </button>
-      </h2>
-      <div id="c6" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students learn how to evaluate software performance and solve problems efficiently using common data structures and algorithms. The course emphasizes computational thinking, complexity analysis, and selecting appropriate solutions for real-world applications.</p>
-          <p><strong>Tools & Technologies:</strong> Python, Algorithm Visualization Tools</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c7">
-          Software Quality (3)
-        </button>
-      </h2>
-      <div id="c7" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students learn how to verify software correctness through automated testing and modern quality assurance practices. The course covers unit testing, integration testing, code quality analysis, and continuous quality processes used by professional development teams.</p>
-          <p><strong>Tools & Technologies:</strong> pytest, GitHub, GitHub Actions, Code Coverage and Analysis Tools</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              Composition I (3) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
         </div>
-      </div>
-    </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c8">
-          Web Application Development (3)
-        </button>
-      </h2>
-      <div id="c8" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students develop full-stack web applications that integrate user interfaces, business logic, APIs, and databases. The course emphasizes responsive design, data-driven applications, testing, debugging, and modern application architecture.</p>
-          <p><strong>Tools & Technologies:</strong> C#, ASP.NET Core, SQL, GitHub</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              Introduction to Communication (3) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
         </div>
-      </div>
-    </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c9">
-          Application Architecture (3)
-        </button>
-      </h2>
-      <div id="c9" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students learn how to design scalable, maintainable software systems using modern architectural patterns and practices. The course explores application structure, API design, distributed systems concepts, and cloud-oriented architectures.</p>
-          <p><strong>Tools & Technologies:</strong> UML and Modeling Tools, Architecture Documentation Tools, Cloud Reference Architectures</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              Social/Behavioral Science Elective (3) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
         </div>
-      </div>
-    </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c10">
-          Cloud Development (3)
-        </button>
-      </h2>
-      <div id="c10" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students build cloud-native applications using managed services and modern cloud development practices. Topics include serverless computing, event-driven architectures, identity and access management, containers, and infrastructure automation.</p>
-          <p><strong>Tools & Technologies:</strong> AWS, Lambda, DynamoDB, API Gateway, Terraform, Docker</p>
-        </div>
       </div>
-    </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c11">
-          Secure Development (3)
-        </button>
-      </h2>
-      <div id="c11" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students learn how to identify, prevent, and mitigate common software vulnerabilities throughout the development lifecycle. The course emphasizes secure coding practices, authentication, authorization, threat modeling, and application security testing.</p>
-          <p><strong>Tools & Technologies:</strong> OWASP Juice Shop, OWASP WebGoat, Postman, Security Analysis Tools</p>
-        </div>
-      </div>
-    </div>
+      <!-- SECOND SEMESTER -->
+      <div class="semester-label">Second Semester</div>
+      <div class="accordion mb-3" id="sem2">
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c12">
-          DevOps Engineering (3)
-        </button>
-      </h2>
-      <div id="c12" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students learn how modern software systems are built, deployed, and maintained through automation and operational practices. The course focuses on continuous integration and deployment, container orchestration, infrastructure as code, and system observability.</p>
-          <p><strong>Tools & Technologies:</strong> GitHub Actions, Docker, Terraform, Kubernetes</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c1" data-bs-parent="#sem2">
+              Systems Analysis and Design (3)
+            </button>
+          </h2>
+          <div id="s2c1" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students learn how to identify business needs and translate them into effective software solutions. The course focuses on requirements gathering, process analysis, system modeling, and solution design, helping students bridge the gap between technical implementation and organizational goals.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> UML, User Stories, Process Modeling Techniques</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c15">
-          Capstone Project / Internship (3)
-        </button>
-      </h2>
-      <div id="c15" class="accordion-collapse collapse" data-bs-parent="#courseAccordion">
-        <div class="accordion-body">
-          <p>Students apply knowledge and skills acquired throughout the program by completing a substantial software engineering project or supervised industry internship. Projects are expected to incorporate software development, testing, cloud technologies, security, and deployment practices.</p>
-          <p><strong>Tools & Technologies:</strong> Varies based on project or internship placement</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c2" data-bs-parent="#sem2">
+              Object-Oriented Design (3)
+            </button>
+          </h2>
+          <div id="s2c2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students build on their programming foundation by learning how to organize, structure, and maintain larger software systems. Emphasis is placed on object-oriented design principles, abstraction, modularity, code reuse, and software maintainability.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Python, GitHub, VS Code</p>
+            </div>
+          </div>
         </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c3" data-bs-parent="#sem2">
+              Data Modeling (3)
+            </button>
+          </h2>
+          <div id="s2c3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students learn how modern applications store, organize, and retrieve data through relational database design and SQL. The course also introduces transactions, normalization, concurrency concepts, and NoSQL databases.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> PostgreSQL, SQL, Database Modeling Tools</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c4" data-bs-parent="#sem2">
+              Computing Systems (3)
+            </button>
+          </h2>
+          <div id="s2c4" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students explore how software interacts with operating systems and computing infrastructure. Topics include processes, memory management, concurrency, virtualization, containers, and foundational concepts that support modern cloud platforms.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Linux, Docker, Kubernetes (introductory)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              Introduction to Ethics (3) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
+        </div>
+
       </div>
+
+      <!-- THIRD SEMESTER -->
+      <div class="semester-label">Third Semester</div>
+      <div class="accordion mb-3" id="sem3">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c1" data-bs-parent="#sem3">
+              IT Project Management (3)
+            </button>
+          </h2>
+          <div id="s3c1" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students learn how software and technology projects are planned, executed, and managed throughout their lifecycle. The course emphasizes Agile project management, team collaboration, risk management, and project communication to prepare students for work on modern development teams.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Agile Methodologies, Scrum, Kanban, Project Management Software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c2" data-bs-parent="#sem3">
+              Algorithms and Data Structures (3)
+            </button>
+          </h2>
+          <div id="s3c2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students learn how to evaluate software performance and solve problems efficiently using common data structures and algorithms. The course emphasizes computational thinking, complexity analysis, and selecting appropriate solutions for real-world applications.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Python, Algorithm Visualization Tools</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c3" data-bs-parent="#sem3">
+              Software Quality (3)
+            </button>
+          </h2>
+          <div id="s3c3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students learn how to verify software correctness through automated testing and modern quality assurance practices. The course covers unit testing, integration testing, code quality analysis, and continuous quality processes used by professional development teams.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> pytest, GitHub, GitHub Actions, Code Coverage and Analysis Tools</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c4" data-bs-parent="#sem3">
+              Web Application Development (3)
+            </button>
+          </h2>
+          <div id="s3c4" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students develop full-stack web applications that integrate user interfaces, business logic, APIs, and databases. The course emphasizes responsive design, data-driven applications, testing, debugging, and modern application architecture.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> C#, ASP.NET Core, SQL, GitHub</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              General Statistics (3) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
+        </div>
+
+      </div>
+
+      <!-- FOURTH SEMESTER -->
+      <div class="semester-label">Fourth Semester</div>
+      <div class="accordion mb-3" id="sem4">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c1" data-bs-parent="#sem4">
+              Application Architecture (3)
+            </button>
+          </h2>
+          <div id="s4c1" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students learn how to design scalable, maintainable software systems using modern architectural patterns and practices. The course explores application structure, API design, distributed systems concepts, and cloud-oriented architectures.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> UML and Modeling Tools, Architecture Documentation Tools, Cloud Reference Architectures</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c2" data-bs-parent="#sem4">
+              Cloud Development (3)
+            </button>
+          </h2>
+          <div id="s4c2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students build cloud-native applications using managed services and modern cloud development practices. Topics include serverless computing, event-driven architectures, identity and access management, containers, and infrastructure automation.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> AWS, Lambda, DynamoDB, API Gateway, Terraform, Docker</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c3" data-bs-parent="#sem4">
+              Secure Development (3)
+            </button>
+          </h2>
+          <div id="s4c3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students learn how to identify, prevent, and mitigate common software vulnerabilities throughout the development lifecycle. The course emphasizes secure coding practices, authentication, authorization, threat modeling, and application security testing.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> OWASP Juice Shop, OWASP WebGoat, Postman, Security Analysis Tools</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c4" data-bs-parent="#sem4">
+              DevOps Engineering (3)
+            </button>
+          </h2>
+          <div id="s4c4" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students learn how modern software systems are built, deployed, and maintained through automation and operational practices. The course focuses on continuous integration and deployment, container orchestration, infrastructure as code, and system observability.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> GitHub Actions, Docker, Terraform, Kubernetes</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c5" data-bs-parent="#sem4">
+              Capstone Project / Internship Experience (3)
+            </button>
+          </h2>
+          <div id="s4c5" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p>Students apply knowledge and skills acquired throughout the program by completing a substantial software engineering project or supervised industry internship. Projects are expected to incorporate software development, testing, cloud technologies, security, and deployment practices.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Varies based on project or internship placement</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- end sequence-col -->
+
+    <!-- Google Form -->
+    <div class="form-col">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScj-ZjWgn5DV6tB1wk1dVzcuRH_GmMRGThZwaTW8GgVyq5mWw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 
   </div>
