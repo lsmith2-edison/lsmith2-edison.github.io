@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Proposed Software Engineering A.A.S.</title>
+  <title>Proposed Software Engineering Programs</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       background-color: #f8f9fa;
     }
     .page-wrapper {
-      max-width: 1400px;
+      max-width: 1800px;
       margin: 0 auto;
       padding: 2rem 1.5rem;
     }
@@ -52,6 +52,31 @@
     .sequence-col {
       flex: 1 1 0;
       min-width: 0;
+    }
+    .col-header {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #0d6efd;
+    }
+    .col-header .col-credit-badge {
+      display: inline-block;
+      background: #0d6efd;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.15rem 0.6rem;
+      border-radius: 20px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    .bas-col-header {
+      border-bottom: 2px solid #198754;
+    }
+    .bas-col-header .col-credit-badge {
+      background: #198754;
     }
     .form-col {
       width: 480px;
@@ -101,12 +126,38 @@
       vertical-align: middle;
       letter-spacing: 0.03em;
     }
+    .related-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: #d1e7dd;
+      color: #0f5132;
+      padding: 0.15rem 0.5rem;
+      border-radius: 20px;
+      margin-left: 0.6rem;
+      vertical-align: middle;
+      letter-spacing: 0.03em;
+    }
+    .prereq-label {
+      font-size: 0.78rem;
+      color: #6c757d;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
     .accordion-body p:last-child {
       margin-bottom: 0;
     }
     .tools-label {
       font-weight: 600;
       color: #1a1a1a;
+    }
+    .semester-credit-subtotal {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #6c757d;
+      text-align: right;
+      margin-top: 0.4rem;
+      margin-bottom: 0;
+      padding-right: 0.25rem;
     }
 
     @media (max-width: 900px) {
@@ -127,21 +178,24 @@
 <div class="page-wrapper">
 
   <div class="program-header">
-    <h1>Proposed Software Engineering A.A.S.</h1>
+    <h1>Proposed Software Engineering Programs</h1>
     <h2>Edison State Community College</h2>
-    <span class="credit-total">61 Credit Hours</span>
-    <p>This program is designed to prepare students for entry-level software engineering, web development, cloud development, quality assurance, DevOps, and related technical roles. Students progress from programming fundamentals through application development, cloud-native systems, secure software development, and modern deployment practices.</p>
-    <p>The proposed program sequence is included below with course descriptions and tools provided for each course relevant to the program (click each course to expand it for details). The number of credit hours are provided for each course in parentheses.</p>
+    <p>Edison State is proposing two pathways in Software Engineering: an Associate of Applied Science (A.A.S.) designed to prepare students for entry-level roles, and a Bachelor of Applied Science (B.A.S.) that builds on the A.A.S. to prepare students for advanced software engineering practice. Both programs emphasize modern tools, cloud-native development, security, and deployment practices.</p>
+    <p>The proposed program sequences are included below with course descriptions and tools provided for each course (click each course to expand it for details). Credit hours are provided for each course in parentheses.</p>
   </div>
 
   <div class="content-area">
 
-    <!-- Course Sequence -->
-    <div class="sequence-col">
+    <!-- AAS COLUMN -->
+    <div class="card p-4 sequence-col">
+      <div class="col-header">
+        Proposed A.A.S. in Software Engineering
+        <span class="col-credit-badge">61 Credit Hours</span>
+      </div>
 
       <!-- FIRST SEMESTER -->
-      <div class="semester-label">First Semester</div>
-      <div class="accordion mb-3" id="sem1">
+      <div class="semester-label">Fall Semester - First Year</div>
+      <div class="accordion mb-1" id="sem1">
 
         <div class="accordion-item">
           <h2 class="accordion-header">
@@ -153,12 +207,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s1c2" data-bs-parent="#sem1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s1c2">
               Programming Foundations (3)
             </button>
           </h2>
           <div id="s1c2" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: None</p>
               <p>Students develop problem-solving and programming skills using Python while learning core concepts such as variables, control structures, functions, data structures, and debugging. Git and GitHub are introduced to establish modern software development practices from the beginning of the program.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> Python, Git, GitHub, VS Code</p>
             </div>
@@ -167,12 +222,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s1c3" data-bs-parent="#sem1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s1c3">
               Web Foundations (3)
             </button>
           </h2>
           <div id="s1c3" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: None</p>
               <p>Students learn to create responsive and accessible websites while exploring modern web standards and client-side development. The course introduces HTML, CSS, JavaScript, browser development tools, and the foundations of interactive web applications.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> HTML, CSS, JavaScript, GitHub, Browser Developer Tools</p>
             </div>
@@ -204,19 +260,21 @@
         </div>
 
       </div>
+      <p class="semester-credit-subtotal">Semester Total: 16 credits</p>
 
       <!-- SECOND SEMESTER -->
-      <div class="semester-label">Second Semester</div>
-      <div class="accordion mb-3" id="sem2">
+      <div class="semester-label">Spring Semester - First Year</div>
+      <div class="accordion mb-1" id="sem2">
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c1" data-bs-parent="#sem2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c1">
               Systems Analysis and Design (3)
             </button>
           </h2>
           <div id="s2c1" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: None</p>
               <p>Students learn how to identify business needs and translate them into effective software solutions. The course focuses on requirements gathering, process analysis, system modeling, and solution design, helping students bridge the gap between technical implementation and organizational goals.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> UML, User Stories, Process Modeling Techniques</p>
             </div>
@@ -225,12 +283,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c2" data-bs-parent="#sem2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c2">
               Object-Oriented Design (3)
             </button>
           </h2>
           <div id="s2c2" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: Programming Foundations</p>
               <p>Students build on their programming foundation by learning how to organize, structure, and maintain larger software systems. Emphasis is placed on object-oriented design principles, abstraction, modularity, code reuse, and software maintainability.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> Python, GitHub, VS Code</p>
             </div>
@@ -239,12 +298,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c3" data-bs-parent="#sem2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c3">
               Data Modeling (3)
             </button>
           </h2>
           <div id="s2c3" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: None</p>
               <p>Students learn how modern applications store, organize, and retrieve data through relational database design and SQL. The course also introduces transactions, normalization, concurrency concepts, and NoSQL databases.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> PostgreSQL, SQL, Database Modeling Tools</p>
             </div>
@@ -253,12 +313,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c4" data-bs-parent="#sem2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2c4">
               Computing Systems (3)
             </button>
           </h2>
           <div id="s2c4" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: None</p>
               <p>Students explore how software interacts with operating systems and computing infrastructure. Topics include processes, memory management, concurrency, virtualization, containers, and foundational concepts that support modern cloud platforms.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> Linux, Docker, Kubernetes (introductory)</p>
             </div>
@@ -274,19 +335,21 @@
         </div>
 
       </div>
+      <p class="semester-credit-subtotal">Semester Total: 15 credits</p>
 
       <!-- THIRD SEMESTER -->
-      <div class="semester-label">Third Semester</div>
-      <div class="accordion mb-3" id="sem3">
+      <div class="semester-label">Fall Semester - Second Year</div>
+      <div class="accordion mb-1" id="sem3">
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c1" data-bs-parent="#sem3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c1">
               IT Project Management (3)
             </button>
           </h2>
           <div id="s3c1" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: None</p>
               <p>Students learn how software and technology projects are planned, executed, and managed throughout their lifecycle. The course emphasizes Agile project management, team collaboration, risk management, and project communication to prepare students for work on modern development teams.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> Agile Methodologies, Scrum, Kanban, Project Management Software</p>
             </div>
@@ -295,12 +358,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c2" data-bs-parent="#sem3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c2">
               Algorithms and Data Structures (3)
             </button>
           </h2>
           <div id="s3c2" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: Object-Oriented Design</p>
               <p>Students learn how to evaluate software performance and solve problems efficiently using common data structures and algorithms. The course emphasizes computational thinking, complexity analysis, and selecting appropriate solutions for real-world applications.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> Python, Algorithm Visualization Tools</p>
             </div>
@@ -309,12 +373,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c3" data-bs-parent="#sem3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c3">
               Software Quality (3)
             </button>
           </h2>
           <div id="s3c3" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: Object-Oriented Design</p>
               <p>Students learn how to verify software correctness through automated testing and modern quality assurance practices. The course covers unit testing, integration testing, code quality analysis, and continuous quality processes used by professional development teams.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> pytest, GitHub, GitHub Actions, Code Coverage and Analysis Tools</p>
             </div>
@@ -323,12 +388,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c4" data-bs-parent="#sem3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3c4">
               Web Application Development (3)
             </button>
           </h2>
           <div id="s3c4" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: Programming Foundations, Web Foundations</p>
               <p>Students develop full-stack web applications that integrate user interfaces, business logic, APIs, and databases. The course emphasizes responsive design, data-driven applications, testing, debugging, and modern application architecture.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> C#, ASP.NET Core, SQL, GitHub</p>
             </div>
@@ -344,19 +410,21 @@
         </div>
 
       </div>
+      <p class="semester-credit-subtotal">Semester Total: 15 credits</p>
 
       <!-- FOURTH SEMESTER -->
-      <div class="semester-label">Fourth Semester</div>
-      <div class="accordion mb-3" id="sem4">
+      <div class="semester-label">Spring Semester - Second Year</div>
+      <div class="accordion mb-1" id="sem4">
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c1" data-bs-parent="#sem4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c1">
               Application Architecture (3)
             </button>
           </h2>
           <div id="s4c1" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: Web Application Development</p>
               <p>Students learn how to design scalable, maintainable software systems using modern architectural patterns and practices. The course explores application structure, API design, distributed systems concepts, and cloud-oriented architectures.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> UML and Modeling Tools, Architecture Documentation Tools, Cloud Reference Architectures</p>
             </div>
@@ -365,12 +433,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c2" data-bs-parent="#sem4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c2">
               Cloud Development (3)
             </button>
           </h2>
           <div id="s4c2" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: Web Application Development</p>
               <p>Students build cloud-native applications using managed services and modern cloud development practices. Topics include serverless computing, event-driven architectures, identity and access management, containers, and infrastructure automation.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> AWS, Lambda, DynamoDB, API Gateway, Terraform, Docker</p>
             </div>
@@ -379,12 +448,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c3" data-bs-parent="#sem4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c3">
               Secure Development (3)
             </button>
           </h2>
           <div id="s4c3" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: Web Application Development</p>
               <p>Students learn how to identify, prevent, and mitigate common software vulnerabilities throughout the development lifecycle. The course emphasizes secure coding practices, authentication, authorization, threat modeling, and application security testing.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> OWASP Juice Shop, OWASP WebGoat, Postman, Security Analysis Tools</p>
             </div>
@@ -393,12 +463,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c4" data-bs-parent="#sem4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c4">
               DevOps Engineering (3)
             </button>
           </h2>
           <div id="s4c4" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: Web Application Development</p>
               <p>Students learn how modern software systems are built, deployed, and maintained through automation and operational practices. The course focuses on continuous integration and deployment, container orchestration, infrastructure as code, and system observability.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> GitHub Actions, Docker, Terraform, Kubernetes</p>
             </div>
@@ -407,12 +478,13 @@
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c5" data-bs-parent="#sem4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4c5">
               Capstone Project / Internship Experience (3)
             </button>
           </h2>
           <div id="s4c5" class="accordion-collapse collapse">
             <div class="accordion-body">
+              <p class="prereq-label">Prereq: Minimum completion of 18 credit hours in program</p>
               <p>Students apply knowledge and skills acquired throughout the program by completing a substantial software engineering project or supervised industry internship. Projects are expected to incorporate software development, testing, cloud technologies, security, and deployment practices.</p>
               <p><span class="tools-label">Tools &amp; Technologies:</span> Varies based on project or internship placement</p>
             </div>
@@ -420,7 +492,273 @@
         </div>
 
       </div>
-    </div><!-- end sequence-col -->
+      <p class="semester-credit-subtotal">Semester Total: 15 credits</p>
+
+    </div><!-- end AAS sequence-col -->
+
+    <!-- BAS COLUMN -->
+    <div class="card p-4 sequence-col">
+      <div class="col-header bas-col-header">
+        Proposed B.A.S. in Software Engineering
+        <span class="col-credit-badge">61 Credit Hours</span>
+      </div>
+
+      <!-- FALL SEMESTER YEAR 1 -->
+      <div class="semester-label">Fall Semester — Third Year</div>
+      <div class="accordion mb-1" id="bassem1">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs1c1">
+              Algorithms and System Design (4)
+            </button>
+          </h2>
+          <div id="bs1c1" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: Algorithms and Data Structures</p>
+              <p>Students extend their understanding of algorithms and computational thinking to address complex, real-world system challenges. The course emphasizes advanced algorithm design, complexity analysis, and the application of algorithmic principles to large-scale system design problems common in modern software engineering.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Python, Algorithm Visualization Tools, System Design Frameworks, Whiteboarding Tools</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs1c2">
+              Advanced Data Systems (4)
+            </button>
+          </h2>
+          <div id="bs1c2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: Data Modeling</p>
+              <p>Students extend their understanding of relational and non-relational database systems to address the demands of modern, data-intensive applications. The course emphasizes query optimization, distributed data architectures, data warehousing, and analytical data processing, preparing students to make informed data design decisions at scale.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> PostgreSQL, DynamoDB, Apache Kafka, dbt, Snowflake or similar data warehouse platform</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs1c3">
+              Platform Engineering (4) <span class="related-badge">Related</span>
+            </button>
+          </h2>
+          <div id="bs1c3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: DevOps Engineering</p>
+              <p>Students examine the principles and practices of designing and operating the internal platforms and tooling that modern software engineering teams depend on. The course emphasizes developer experience, platform observability, incident response, service level objectives, and the operational practices that enable engineering organizations to deliver software reliably at scale. Students develop an appreciation for the platform engineering discipline as both consumers and informed collaborators of internal developer platforms.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Kubernetes, Prometheus, Grafana, PagerDuty or similar incident management platform, AWS CloudWatch, Terraform</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              Composition II (3) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
+        </div>
+
+      </div>
+      <p class="semester-credit-subtotal">Semester Total: 15 credits</p>
+
+      <!-- SPRING SEMESTER YEAR 1 -->
+      <div class="semester-label">Spring Semester — Third Year</div>
+      <div class="accordion mb-1" id="bassem2">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs2c1">
+              Distributed Systems (4)
+            </button>
+          </h2>
+          <div id="bs2c1" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: Algorithms and System Design</p>
+              <p>Students examine the principles and challenges of designing and building software systems that operate across multiple networked components. The course emphasizes consistency models, fault tolerance, distributed communication patterns, and the architectural trade-offs that govern modern cloud-native and microservice-based applications.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Docker, Kubernetes, Apache Kafka, gRPC, AWS (ECS, SQS, SNS)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs2c2">
+              Machine Learning Engineering (4)
+            </button>
+          </h2>
+          <div id="bs2c2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: Advanced Data Systems, General Statistics</p>
+              <p>Students apply machine learning concepts and engineering practices to design, train, evaluate, and deploy models in production environments. The course emphasizes data preparation, model selection, performance evaluation, MLOps practices, and the responsible development of AI-powered software systems.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Python, scikit-learn, TensorFlow or PyTorch, Jupyter, AWS SageMaker, MLflow</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs2c3">
+              Research Methods &amp; Technical Communication (4) <span class="related-badge">Related</span>
+            </button>
+          </h2>
+          <div id="bs2c3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: None</p>
+              <p>Students develop the research and communication skills essential for professional software engineering practice. The course emphasizes evaluating and synthesizing technical literature, designing and conducting applied research, and producing professional technical documentation including architecture decision records, technical proposals, and engineering reports. Students apply these skills directly to software engineering contexts throughout the course.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> IEEE/ACM Digital Libraries, Markdown, Confluence or similar documentation platform, GitHub, Diagramming Tools</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              College Algebra (3) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
+        </div>
+
+      </div>
+      <p class="semester-credit-subtotal">Semester Total: 15 credits</p>
+
+      <!-- SUMMER SEMESTER YEAR 1 -->
+      <div class="semester-label">Summer Semester — Third Year</div>
+      <div class="accordion mb-1" id="bassem3">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              Humanities Elective — Ohio Transfer 36 (3) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
+        </div>
+
+      </div>
+      <p class="semester-credit-subtotal">Semester Total: 3 credits</p>
+
+      <!-- FALL SEMESTER YEAR 2 -->
+      <div class="semester-label">Fall Semester — Fourth Year</div>
+      <div class="accordion mb-1" id="bassem4">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs4c1">
+              Cloud Architecture (4)
+            </button>
+          </h2>
+          <div id="bs4c1" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: Cloud Development</p>
+              <p>Students extend their cloud development skills to design and evaluate scalable, resilient, and cost-optimized cloud infrastructure for enterprise-grade applications. The course emphasizes multi-region architectures, cloud security posture, cost management, infrastructure automation, and the application of well-architected framework principles to real-world cloud environments.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> AWS, Terraform, AWS Well-Architected Tool, AWS Cost Explorer, CloudWatch, AWS Config</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs4c2">
+              Technical Leadership &amp; Professional Ethics (4) <span class="related-badge">Related</span>
+            </button>
+          </h2>
+          <div id="bs4c2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: None</p>
+              <p>Students examine the responsibilities, practices, and ethical dimensions of leadership within software engineering teams and organizations. The course emphasizes mentoring, code review culture, architectural decision facilitation, cross-functional communication, and the ethical obligations of software engineers with respect to privacy, accessibility, intellectual property, and AI development. Case studies and simulation exercises ground leadership concepts in realistic software engineering contexts.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Case Study Frameworks, Agile/Scrum Tooling, GitHub (code review workflows), Communication and Collaboration Platforms</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs4c3">
+              Senior Capstone I (3)
+            </button>
+          </h2>
+          <div id="bs4c3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: Minimum completion of third year</p>
+              <p>Students define, scope, and design a substantial software engineering project that integrates the knowledge and skills acquired throughout the program. The course emphasizes problem identification, requirements analysis, architectural decision-making, and project planning, culminating in a comprehensive design document and development roadmap approved for implementation in Senior Capstone II.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Varies based on project scope and design decisions</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              American Civic Literacy (3) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
+        </div>
+
+      </div>
+      <p class="semester-credit-subtotal">Semester Total: 14 credits</p>
+
+      <!-- SPRING SEMESTER YEAR 2 -->
+      <div class="semester-label">Spring Semester — Fourth Year</div>
+      <div class="accordion mb-1" id="bassem5">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs5c1">
+              Mobile App Development (4) <span class="related-badge">Related</span>
+            </button>
+          </h2>
+          <div id="bs5c1" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: Web Application Development</p>
+              <p>Students design and build mobile applications for modern smartphone platforms using cross-platform development frameworks. The course emphasizes mobile user interface design, device capability integration, offline data management, API consumption, and the deployment of applications to mobile distribution platforms. Students apply software engineering principles developed throughout the program to the unique constraints and opportunities of the mobile development environment.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> React Native or Flutter, JavaScript or Dart, REST APIs, SQLite, iOS App Store and Google Play deployment tooling</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs5c2">
+              Secure Software Engineering (4)
+            </button>
+          </h2>
+          <div id="bs5c2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: Secure Development</p>
+              <p>Students apply advanced security principles and practices throughout the software development lifecycle to design and build resilient, secure applications. The course emphasizes threat modeling, secure architecture patterns, supply chain security, secrets management, and the integration of automated security testing into modern development pipelines, with alignment to the Certified Secure Software Lifecycle Professional (CSSLP) body of knowledge.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> OWASP SAMM, Snyk, GitHub Advanced Security, HashiCorp Vault, OWASP ZAP, AWS Security Hub</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs5c3">
+              Senior Capstone II (3)
+            </button>
+          </h2>
+          <div id="bs5c3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              <p class="prereq-label">Prereq: Senior Capstone I</p>
+              <p>Students implement, deploy, and defend the software engineering project designed in Senior Capstone I. The course emphasizes production-quality development practices, cloud deployment, security, testing, and professional presentation of completed work. Projects are expected to demonstrate mastery of software engineering principles developed throughout the program.</p>
+              <p><span class="tools-label">Tools &amp; Technologies:</span> Varies based on project scope and design decisions</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button no-expand" type="button">
+              Fundamentals of Economics (3) <span class="gened-badge">Gen Ed</span>
+            </button>
+          </h2>
+        </div>
+
+      </div>
+      <p class="semester-credit-subtotal">Semester Total: 14 credits</p>
+
+    </div><!-- end BAS sequence-col -->
 
     <!-- Google Form -->
     <div class="form-col">
